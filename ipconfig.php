@@ -1,4 +1,7 @@
-# <?php exit('No direct script access allowed'); ?>
+# <?php exit('No direct script access allowed');
+$railway_url = isset($_ENV['RAILWAY_PUBLIC_DOMAIN']) ? 'https://' . $_ENV['RAILWAY_PUBLIC_DOMAIN'] : 'http://localhost';
+IP_URL = $railway_url;
+?>
 # InvoicePlane Configuration File
 
 ### START HERE

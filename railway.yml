@@ -1,0 +1,12 @@
+version: 2
+build:
+  command: |
+    composer install --no-dev --optimize-autoloader
+    chmod -R 777 application/logs
+    chmod -R 777 uploads
+    chmod 644 ipconfig.php
+deploy:
+  healthcheck:
+    path: /
+    timeout: 30s
+    interval: 10s
